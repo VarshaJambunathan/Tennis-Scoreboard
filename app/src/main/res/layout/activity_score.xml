@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tennisscoreboard.ScoreActivity"
+    android:padding="30dp"
+    android:background="@color/skyblue"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAYER A"
+        android:id="@+id/text_a"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAYER B"
+        android:id="@+id/text_b"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAYER A's SCORE"
+        android:id="@+id/score_text_a"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/text_a"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAYER B's SCORE"
+        android:id="@+id/score_text_b"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/text_b"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="150px"
+        android:text="0"
+        android:layout_below="@id/score_text_a"
+        android:id="@+id/score_a" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_marginRight="30dp"
+        android:textSize="150px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:layout_below="@id/score_text_b"
+        android:id="@+id/score_b"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/ic_add_black_24dp"
+        android:layout_below="@id/score_a"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/inc_a"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/ic_add_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/score_b"
+        android:layout_marginRight="30dp"
+        android:id="@+id/inc_b"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:background="@color/darkerorange"
+        android:layout_below="@id/inc_a"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:id="@+id/reset_score"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOW WINNER"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:background="@color/darkerorange"
+        android:layout_below="@id/inc_b"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:id="@+id/winner"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/inc_a"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/tennis"
+        android:id="@+id/imageContainer"
+        />
+
+</RelativeLayout>
