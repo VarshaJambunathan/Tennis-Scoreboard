@@ -7,7 +7,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.tennisscoreboard.LearningIntents"
     tools:showIn="@layout/app_bar_learning_intents"
-    android:layout_margin="15dp"
+    android:padding="15dp"
+    android:background="@color/lightorange"
     >
 
     <Button
@@ -16,10 +17,10 @@
         android:text="Launch Camera"
         style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
         android:background="@color/colorAccent"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:id="@+id/launch_camera"
         android:padding="5dp"
-        android:textSize="15dp"
         />
     <ImageView
         android:layout_width="match_parent"
@@ -63,6 +64,19 @@
         android:layout_below="@id/url_data"
         android:layout_centerInParent="true"
         android:id="@+id/browser_intent"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/call_intent"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/browser_intent"
+        android:text="DIAL NUMBER"
+        android:layout_marginTop="10dp"
         />
 
 </RelativeLayout>

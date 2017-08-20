@@ -26,7 +26,7 @@ public class LearningIntents extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     EditText sSearchData;
-    Button mSms, mBrowser, mCamera;
+    Button mSms, mBrowser, mCamera, mCall;
     ImageView mDisplay;
     private static final int CAMERA_REQUEST = 1888;
 
@@ -51,11 +51,13 @@ public class LearningIntents extends AppCompatActivity
         mCamera = (Button)findViewById(R.id.launch_camera);
         mBrowser = (Button)findViewById(R.id.browser_intent);
         mSms = (Button)findViewById(R.id.sms_intent);
+        mCall = (Button)findViewById(R.id.call_intent);
         mDisplay = (ImageView)findViewById(R.id.display_image);
 
         mCamera.setOnClickListener(this);
         mBrowser.setOnClickListener(this);
         mSms.setOnClickListener(this);
+        mCall.setOnClickListener(this);
 
     }
 
@@ -125,7 +127,6 @@ public class LearningIntents extends AppCompatActivity
                 Intent browse = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 Intent browserChooserIntent = Intent.createChooser(browse , "Choose browser of your choice");
                 startActivity(browserChooserIntent);
-
                 break;
 
             case R.id.launch_camera:
@@ -135,8 +136,15 @@ public class LearningIntents extends AppCompatActivity
                 break;
 
             case R.id.sms_intent:
-                String number = "9483485874";  // The number on which you want to send SMS
+                String number = "8888888888";  // The number on which you want to send SMS
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+                break;
+
+            case R.id.call_intent:
+                String phone = "8888888888";
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+phone));
+                startActivity(callIntent);
                 break;
         }
     }
