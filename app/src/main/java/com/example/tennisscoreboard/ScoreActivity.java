@@ -1,5 +1,6 @@
 package com.example.tennisscoreboard;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -83,6 +84,15 @@ public class ScoreActivity extends AppCompatActivity {
                     Toast.makeText(ScoreActivity.this, "Player B wins!", Toast.LENGTH_SHORT).show();
                     mTextB.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lightorange));
                 }
+            }
+        });
+
+        mSetImage.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent next = new Intent(ScoreActivity.this, LearningIntents.class);
+                startActivity(next);
+                return true;
             }
         });
 

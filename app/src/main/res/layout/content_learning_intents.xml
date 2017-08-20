@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tennisscoreboard.LearningIntents"
+    tools:showIn="@layout/app_bar_learning_intents"
+    android:layout_margin="15dp"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Camera"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:id="@+id/launch_camera"
+        android:padding="5dp"
+        android:textSize="15dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/launch_camera"
+        android:id="@+id/display_image"
+        android:src="@mipmap/ic_launcher"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND SMS"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:background="@color/darkerorange"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/sms_intent"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a Url"
+        android:layout_below="@id/display_image"
+        android:id="@+id/url_data"
+        android:text="http://www.example.com"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/url_data"
+        android:layout_centerInParent="true"
+        android:id="@+id/browser_intent"
+        />
+
+</RelativeLayout>
